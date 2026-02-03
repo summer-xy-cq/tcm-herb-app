@@ -173,6 +173,11 @@ export const getAllQuizRecords = async () => {
 }
 
 // 清空答题记录并重置练习统计
+// 获取练习历史
+export const getQuizHistory = async () => {
+    return (await localforage.getItem('quiz_history')) || []
+}
+
 export const clearQuizHistory = async () => {
     try {
         await localforage.removeItem('quiz_history')
@@ -299,7 +304,16 @@ export const getTodayUniqueHerbCount = async () => {
         return 0
     }
 }
-
+// 清除所有数据
+export const clearAllData = async () => {
+    try {
+        await localforage.clear()
+        // Re-initialize stats
+        await saveStats(getInitialStats())
+    } catch (e) {
+        console.error('Clear all data failed', e)
+    }
+}
 // 获取累计识别的唯一饮片数量 (去重)
 export const getTotalUniqueHerbCount = async () => {
     try {

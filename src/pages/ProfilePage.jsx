@@ -22,17 +22,11 @@ function ProfilePage() {
 
     const totalStats = stats?.total || { recognized: 0, practiced: 0, correct: 0 }
 
-    // Settings Menu Items
-    const menuItems = [
-        { icon: '🔒', title: '账号安全', desc: '修改密码、绑定手机', path: '#' },
-        { icon: '⚙️', title: '通用设置', desc: '通知、语言、深色模式', path: '#' },
-        { icon: '🗑️', title: '清除缓存', desc: '释放空间', onClick: () => setShowClearCacheModal(true) },
-        { icon: 'ℹ️', title: '关于我们', desc: '当前版本 v1.0.0', path: '#' },
-    ]
-
     const handleClearCache = async () => {
-        // Mock clearing cache logic
-        setShowClearModal(false)
+        await clearAllData()
+        setShowClearCacheModal(false)
+        await loadStats() // Reload stats to show 0
+        alert('本地学习记录已清除')
     }
 
     // 导出数据功能
@@ -97,7 +91,6 @@ function ProfilePage() {
 
             {/* 学习统计 */}
             <div className="stats-grid fade-in">
-                {/* ... existing stats ... */}
                 <div className="stat-card">
                     <span className="stat-value">{stats?.today?.practiced || 0}</span>
                     <span className="stat-label">今日练习</span>
@@ -127,16 +120,48 @@ function ProfilePage() {
                         <span className="achievement-value">{totalUniqueCount}</span>
                         <span className="achievement-label">累计识别 ›</span>
                     </div>
-                    <div className="dialog-actions">
-                        <button className="btn btn-secondary" onClick={() => setShowClearCacheModal(false)}>
-                            取消
-                        </button>
-                        <button className="btn btn-primary" onClick={handleClearCache}>
-                            确认清除
-                        </button>
-                    </div>
                 </div>
             </div>
+
+            {/* 设置清单 */}
+            <div className="settings-list fade-in" style={{ marginTop: '20px' }}>
+                <button className="setting-item touchable" onClick={handleExportData}>
+                    <span className="setting-icon">📤</span>
+                    <span className="setting-label">导出学习数据 (给老师)</span>
+                    <span className="setting-arrow">›</span>
+                </button>
+
+                <button className="setting-item touchable" onClick={() => setShowClearCacheModal(true)}>
+                    <span className="setting-icon">🗑️</span>
+                    <span className="setting-label">清除缓存数据</span>
+                    <span className="setting-arrow">›</span>
+                </button>
+
+                <div className="setting-item">
+                    <span className="setting-icon">ℹ️</span>
+                    <span className="setting-label">当前版本</span>
+                    <span className="setting-value">v1.0.0</span>
+                </div>
+            </div>
+
+            {/* Clear Cache Modal */}
+            {showClearCacheModal && (
+                <div className="dialog-overlay" onClick={() => setShowClearCacheModal(false)}>
+                    <div className="dialog slide-up" onClick={e => e.stopPropagation()}>
+                        <h3 className="dialog-title">⚠️ 危险操作</h3>
+                        <p className="dialog-text">
+                            确定要清除所有本地数据吗？您的识别记录、错题本和统计数据将永久丢失，无法恢复。
+                        </p>
+                        <div className="dialog-actions">
+                            <button className="btn btn-secondary" onClick={() => setShowClearCacheModal(false)}>
+                                取消
+                            </button>
+                            <button className="btn btn-primary" onClick={handleClearCache}>
+                                确认清除
+                            </button>
+                        </div>
+                    </div>
+                </div>
             )}
         </div>
     )
