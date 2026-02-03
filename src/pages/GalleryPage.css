@@ -1,0 +1,122 @@
+.gallery-page {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-xl));
+}
+
+/* 搜索框 */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-md);
+}
+
+.search-icon {
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: var(--spacing-xs) 0;
+    font-size: var(--font-size-sm);
+    background: transparent;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* 分类标签 */
+.category-tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.category-tab {
+    flex-shrink: 0;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.category-tab.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+/* 分类组 */
+.category-group {
+    margin-bottom: var(--spacing-xl);
+}
+
+.category-title {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-xs);
+    border-left: 3px solid var(--color-primary);
+}
+
+/* 药材网格 */
+.herb-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.herb-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.herb-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.herb-card-icon {
+    font-size: 28px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.herb-card-name {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.herb-card-nature {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

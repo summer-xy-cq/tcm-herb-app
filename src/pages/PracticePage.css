@@ -1,0 +1,170 @@
+.practice-page {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-xl));
+}
+
+/* 练习模式 */
+.practice-modes {
+    margin-bottom: var(--spacing-xl);
+}
+
+.modes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.mode-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.mode-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--mode-color);
+}
+
+.mode-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+}
+
+.mode-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.mode-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.mode-desc {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 按药材练习 */
+.practice-by-herb {
+    flex: 1;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-md);
+}
+
+.search-icon {
+    font-size: 18px;
+    opacity: 0.5;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: var(--spacing-xs) 0;
+    font-size: var(--font-size-sm);
+    background: transparent;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* 分类筛选 */
+.category-filter {
+    display: flex;
+    gap: var(--spacing-xs);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    flex-shrink: 0;
+    padding: var(--spacing-xs) var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+}
+
+/* 药材列表 */
+.herb-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.herb-list-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+}
+
+.herb-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.herb-item-name {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.herb-item-pinyin {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.herb-item-category {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    background-color: var(--color-bg);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+}
+
+.herb-item-arrow {
+    color: var(--color-text-muted);
+}

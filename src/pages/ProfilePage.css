@@ -1,0 +1,267 @@
+/* User Center Update */
+.profile-page {
+    /* Ensure full height background */
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-header {
+    background-color: white;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.avatar-container {
+    width: 64px;
+    height: 64px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.avatar {
+    font-size: 32px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.user-id {
+    margin: 4px 0 0 0;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.btn-edit-profile {
+    background: transparent;
+    border: 1px solid #e5e7eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Achievements */
+.achievement-section {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+.achievement-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievement-value {
+    font-size: 24px;
+    font-weight: 800;
+    color: #10B981;
+    /* Primary Color */
+    line-height: 1.2;
+}
+
+.achievement-label {
+    font-size: 12px;
+    color: #4b5563;
+    margin-top: 4px;
+}
+
+.divider {
+    width: 1px;
+    height: 40px;
+    background-color: #e5e7eb;
+}
+
+/* Menu */
+.menu-list {
+    background-color: white;
+    margin: 0 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s;
+}
+
+.menu-item:active {
+    background-color: #f9fafb;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-icon {
+    font-size: 18px;
+    width: 28px;
+    margin-right: 12px;
+    text-align: center;
+}
+
+.menu-content {
+    flex: 1;
+}
+
+.menu-title {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+.menu-desc {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.menu-arrow {
+    color: #d1d5db;
+    font-size: 18px;
+}
+
+.logout-btn {
+    margin: 32px 16px 20px;
+    width: calc(100% - 32px);
+    background-color: white !important;
+    color: #ef4444 !important;
+    border: none !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Interactive */
+.touchable {
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.touchable:active {
+    opacity: 0.7;
+}
+
+/* Modal / Dialog */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dialog {
+    background: white;
+    width: 80%;
+    max-width: 320px;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease-out;
+}
+
+.dialog-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.dialog-text {
+    font-size: 14px;
+    color: #4b5563;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.dialog-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-primary {
+    background-color: #10B981;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

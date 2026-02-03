@@ -1,0 +1,468 @@
+.herb-detail-page {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* 返回按钮 */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+/* 头部 */
+.herb-detail-header {
+    text-align: center;
+    padding: var(--spacing-md) 0 var(--spacing-lg);
+}
+
+.herb-detail-name {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.herb-detail-pinyin {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.herb-detail-tags {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+/* 标签切换 */
+.tabs {
+    display: flex;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    transition: all 0.2s ease;
+}
+
+.tab.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.tab-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: 600;
+    background-color: var(--color-primary-bg);
+    color: var(--color-primary);
+}
+
+.tab.active .tab-badge {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+/* 药材信息 */
+.herb-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.info-section {
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+}
+
+.info-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.info-content {
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.property-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.property-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.property-value {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.caution-section {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    border-color: #F59E0B;
+}
+
+.caution-section .info-title {
+    color: #B45309;
+}
+
+.caution-section .info-content {
+    color: #92400E;
+}
+
+/* 题目区域 */
+.herb-questions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.question-progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.question-source {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.question-card {
+    padding: var(--spacing-lg);
+    background-color: #000000 !important;
+    border: 1px solid #374151;
+}
+
+.question-text {
+    font-size: var(--font-size-base);
+    font-weight: 700 !important;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+    color: #FFFFFF !important;
+}
+
+.question-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: var(--spacing-md);
+    background-color: #1F2937 !important;
+    border: 2px solid #374151;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600 !important;
+    line-height: 1.5;
+    color: #FFFFFF !important;
+    transition: all 0.2s ease;
+}
+
+.option-btn:active {
+    transform: scale(0.98);
+}
+
+.option-btn.selected {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-bg);
+}
+
+.option-btn.correct {
+    border-color: var(--color-success);
+    background-color: #DCFCE7;
+}
+
+.option-btn.wrong {
+    border-color: var(--color-error);
+    background-color: #FEE2E2;
+}
+
+.question-explanation {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background-color: var(--color-primary-bg);
+    border-radius: var(--radius-md);
+}
+
+.question-explanation h4 {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.question-explanation p {
+    font-size: var(--font-size-sm);
+    color: var(--color-primary-dark);
+    line-height: 1.6;
+}
+
+.question-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.question-actions .btn {
+    flex: 1;
+}
+
+.question-actions .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 图片网格 */
+.herb-images {
+    min-height: 200px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.image-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-date {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+
+/* Image Modification Styles */
+.image-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 8px;
+}
+
+.image-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.image-date {
+    font-size: 12px;
+    color: #666;
+    background: none;
+    /* Override previous absolute positioning style */
+    position: static;
+    padding: 0;
+}
+
+.image-item {
+    aspect-ratio: 1;
+    /* Keep aspect ratio */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.correct-btn {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.delete-btn {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content.correct-modal {
+    background: #fff;
+    padding: 24px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.herb-list-scroll {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.herb-option {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.herb-option:hover {
+    background: #f9f9f9;
+}
+
+.current-tag {
+    color: #999;
+    font-size: 12px;
+}
+
+.close-modal-btn {
+    width: 100%;
+    padding: 12px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #374151;
+}
+
+/* Modal/Dialog Styles (Ported from ScanPage) */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 200;
+    padding: var(--spacing-md);
+}
+
+.dialog {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    padding: var(--spacing-lg);
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: calc(var(--spacing-lg) + var(--safe-area-bottom));
+}
+
+.dialog-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.dialog-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.dialog-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.dialog-actions .btn {
+    flex: 1;
+}

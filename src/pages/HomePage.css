@@ -1,0 +1,230 @@
+.home-page {
+    padding-top: calc(var(--safe-area-top) + var(--spacing-lg));
+}
+
+/* 头部 */
+.home-header {
+    text-align: center;
+    padding: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.home-logo {
+    font-size: 48px;
+    margin-bottom: var(--spacing-sm);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.home-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-xs);
+}
+
+.home-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+/* 快速开始 */
+.home-quick-start {
+    margin-bottom: var(--spacing-xl);
+}
+
+.quick-start-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: var(--radius-xl);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+}
+
+.quick-start-icon {
+    font-size: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-lg);
+}
+
+.quick-start-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-start-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.quick-start-desc {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+}
+
+.quick-start-arrow {
+    font-size: var(--font-size-xl);
+    opacity: 0.8;
+}
+
+/* 区块标题 */
+.section-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* 功能网格 */
+.home-features {
+    margin-bottom: var(--spacing-xl);
+}
+
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout like quick start */
+    align-items: center;
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: var(--spacing-md);
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    font-size: 32px;
+    background: rgba(var(--feature-int-color, 0, 0, 0), 0.1);
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 0;
+    /* Override previous style */
+}
+
+/* Helper to convert hex color to something usable if needed, 
+   but simplistic approach: Use inline border-left or just icon color */
+.feature-title {
+    font-size: var(--font-size-lg);
+    /* Larger title */
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.feature-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+/* 统计区域 */
+.home-stats {
+    margin-bottom: var(--spacing-xl);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-item.touchable {
+    cursor: pointer;
+}
+
+.stat-item.touchable:active {
+    transform: scale(0.98);
+}
+
+.stat-arrow {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+    color: #ccc;
+    opacity: 0.6;
+}
+
+.stat-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.stat-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+/* 提示卡片 - 特殊处理，保持亮色以醒目，或改为深色 */
+.home-tips {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tip-card {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: #000000;
+    border: 1px solid #374151;
+    border-radius: var(--radius-lg);
+}
+
+.tip-title {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.tip-text {
+    font-size: var(--font-size-sm);
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    line-height: 1.5;
+}

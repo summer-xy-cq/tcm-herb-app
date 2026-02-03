@@ -1,0 +1,331 @@
+.scan-page {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 识别区域 */
+.scan-area {
+    flex: 1;
+    min-height: 300px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-xl);
+    border: 2px dashed var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden;
+    position: relative;
+}
+
+.scan-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.scan-icon {
+    font-size: 64px;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.scan-hint {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.scan-preview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.preview-actions {
+    position: absolute;
+    bottom: var(--spacing-lg);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    z-index: 10;
+}
+
+.start-recognize-btn {
+    width: 80%;
+    max-width: 240px;
+    box-shadow: var(--shadow-lg);
+}
+
+.discard-btn {
+    width: 80%;
+    max-width: 240px;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(4px);
+}
+
+.scan-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    /* 移除 backdrop-filter 以防止部分设备渲染异常导致黑屏 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: var(--spacing-md);
+    z-index: 20;
+}
+
+/* 操作按钮 */
+.scan-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.scan-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.scan-btn-icon {
+    font-size: 32px;
+}
+
+.camera-btn:hover {
+    background-color: var(--color-primary-bg);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.gallery-btn:hover {
+    background-color: #F3E8FF;
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.btn-danger-light {
+    background-color: #FEF2F2 !important;
+    color: #DC2626 !important;
+    border: 1px solid #FECACA !important;
+}
+
+.btn-danger-light:active {
+    background-color: #FEE2E2 !important;
+}
+
+/* 识别结果 */
+.scan-result {
+    margin-top: var(--spacing-md);
+}
+
+.result-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--spacing-sm);
+}
+
+.result-confidence {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.confidence-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.confidence-value {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.result-herb {
+    padding: var(--spacing-lg);
+}
+
+.herb-header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.herb-name {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+
+.herb-pinyin {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.herb-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.herb-effects {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.result-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.result-actions .btn {
+    flex: 1;
+    font-size: var(--font-size-sm);
+}
+
+/* 错误状态 */
+.scan-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl);
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+}
+
+.error-text {
+    color: var(--color-error);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 对话框 */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 200;
+    padding: var(--spacing-md);
+}
+
+.dialog {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    padding: var(--spacing-lg);
+    width: 100%;
+    max-width: 400px;
+    padding-bottom: calc(var(--spacing-lg) + var(--safe-area-bottom));
+}
+
+.dialog-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.dialog-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.dialog-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+
+.dialog-actions .btn {
+    flex: 1;
+}
+
+/* Correction UI */
+.error-report-btn {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    color: #ef4444;
+    /* Red color for error reporting */
+    text-decoration: underline;
+    font-size: 14px;
+    background: none;
+    border: none;
+}
+
+.correct-dialog .dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-danger-text {
+    color: #ef4444;
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+.herb-list-scroll {
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.herb-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+}
+
+.herb-option:hover {
+    background-color: #f9fafb;
+}
+
+.action-tag {
+    font-size: 12px;
+    color: white;
+    background-color: var(--color-primary);
+    padding: 2px 8px;
+    border-radius: 999px;
+}

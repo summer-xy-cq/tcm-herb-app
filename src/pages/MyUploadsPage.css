@@ -1,0 +1,53 @@
+.uploads-page {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-xl));
+}
+
+.back-btn {
+    color: var(--color-primary);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.uploads-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.upload-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+    position: relative;
+}
+
+.upload-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.upload-info {
+    padding: var(--spacing-sm);
+    background: white;
+    border-top: 1px solid #f0f0f0;
+}
+
+.upload-name {
+    display: block;
+    font-weight: 500;
+    font-size: var(--font-size-sm);
+    color: var(--color-text);
+    margin-bottom: 2px;
+}
+
+.upload-date {
+    display: block;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}

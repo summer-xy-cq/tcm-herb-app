@@ -1,0 +1,560 @@
+[
+    {
+        "id": "huangqi",
+        "name": "黄芪",
+        "pinyin": "Huang Qi",
+        "latinName": "Astragali Radix",
+        "alias": [
+            "绵芪",
+            "黄耆"
+        ],
+        "category": "补虚药-补气药",
+        "source": "豆科植物蒙古黄芪或膜荚黄芪的干燥根",
+        "properties": {
+            "nature": "微温",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "肺",
+                "脾"
+            ]
+        },
+        "effects": "补气升阳，固表止汗，利水消肿，生津养血，行滞通痹，托毒排脓，敛疮生肌",
+        "indications": "气虚乏力，食少便溏，中气下陷，久泻脱肛，便血崩漏，表虚自汗，气虚水肿，内热消渴，血虚萎黄，半身不遂，痹痛麻木，痈疽难溃，久溃不敛",
+        "dosage": "9-30g",
+        "caution": "表实邪盛、气滞湿阻、食积内停者慎用",
+        "image": "huangqi.jpg"
+    },
+    {
+        "id": "renshen",
+        "name": "人参",
+        "pinyin": "Ren Shen",
+        "latinName": "Ginseng Radix et Rhizoma",
+        "alias": [
+            "棒槌",
+            "神草"
+        ],
+        "category": "补虚药-补气药",
+        "source": "五加科植物人参的干燥根和根茎",
+        "properties": {
+            "nature": "微温",
+            "flavor": [
+                "甘",
+                "微苦"
+            ],
+            "meridians": [
+                "脾",
+                "肺",
+                "心",
+                "肾"
+            ]
+        },
+        "effects": "大补元气，复脉固脱，补脾益肺，生津养血，安神益智",
+        "indications": "体虚欲脱，肢冷脉微，脾虚食少，肺虚喘咳，津伤口渴，内热消渴，气血亏虚，久病虚羸，惊悸失眠，阳痿宫冷",
+        "dosage": "3-9g，另煎兑服",
+        "caution": "不宜与藜芦、五灵脂同用",
+        "image": "renshen.jpg"
+    },
+    {
+        "id": "gancao",
+        "name": "甘草",
+        "pinyin": "Gan Cao",
+        "latinName": "Glycyrrhizae Radix et Rhizoma",
+        "alias": [
+            "国老",
+            "甜草"
+        ],
+        "category": "补虚药-补气药",
+        "source": "豆科植物甘草、胀果甘草或光果甘草的干燥根和根茎",
+        "properties": {
+            "nature": "平",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "心",
+                "肺",
+                "脾",
+                "胃"
+            ]
+        },
+        "effects": "补脾益气，清热解毒，祛痰止咳，缓急止痛，调和诸药",
+        "indications": "脾胃虚弱，倦怠乏力，心悸气短，咳嗽痰多，脘腹、四肢挛急疼痛，痈肿疮毒，缓解药物毒性、烈性",
+        "dosage": "2-10g",
+        "caution": "不宜与海藻、京大戟、红大戟、甘遂、芫花同用",
+        "image": "gancao.jpg"
+    },
+    {
+        "id": "danggui",
+        "name": "当归",
+        "pinyin": "Dang Gui",
+        "latinName": "Angelicae Sinensis Radix",
+        "alias": [
+            "秦归",
+            "云归"
+        ],
+        "category": "补虚药-补血药",
+        "source": "伞形科植物当归的干燥根",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "甘",
+                "辛"
+            ],
+            "meridians": [
+                "肝",
+                "心",
+                "脾"
+            ]
+        },
+        "effects": "补血活血，调经止痛，润肠通便",
+        "indications": "血虚萎黄，眩晕心悸，月经不调，经闭痛经，虚寒腹痛，风湿痹痛，跌扑损伤，痈疽疮疡，肠燥便秘",
+        "dosage": "6-12g",
+        "caution": "湿盛中满，大便溏泄者慎用",
+        "image": "danggui.jpg"
+    },
+    {
+        "id": "shudihuang",
+        "name": "熟地黄",
+        "pinyin": "Shu Di Huang",
+        "latinName": "Rehmanniae Radix Praeparata",
+        "alias": [
+            "熟地"
+        ],
+        "category": "补虚药-补血药",
+        "source": "玄参科植物地黄的根茎经加工蒸晒而成",
+        "properties": {
+            "nature": "微温",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "肝",
+                "肾"
+            ]
+        },
+        "effects": "补血滋阴，益精填髓",
+        "indications": "血虚萎黄，心悸怔忡，月经不调，崩漏下血，肝肾阴虚，腰膝酸软，骨蒸潮热，盗汗遗精，内热消渴，眩晕，耳鸣，须发早白",
+        "dosage": "9-15g",
+        "caution": "本品性质粘腻，有碍消化，凡气滞痰多、脘腹胀痛、食少便溏者忌服",
+        "image": "shudihuang.jpg"
+    },
+    {
+        "id": "chaihu",
+        "name": "柴胡",
+        "pinyin": "Chai Hu",
+        "latinName": "Bupleuri Radix",
+        "alias": [
+            "北柴胡",
+            "南柴胡"
+        ],
+        "category": "解表药-发散风热药",
+        "source": "伞形科植物柴胡或狭叶柴胡的干燥根",
+        "properties": {
+            "nature": "微寒",
+            "flavor": [
+                "苦",
+                "辛"
+            ],
+            "meridians": [
+                "肝",
+                "胆",
+                "肺"
+            ]
+        },
+        "effects": "解表退热，疏肝解郁，升举阳气",
+        "indications": "感冒发热，寒热往来，胸胁胀痛，月经不调，子宫脱垂，脱肛",
+        "dosage": "3-10g",
+        "caution": "肝阳上亢，肝风内动，阴虚火旺及气机上逆者忌用",
+        "image": "chaihu.jpg"
+    },
+    {
+        "id": "mahuang",
+        "name": "麻黄",
+        "pinyin": "Ma Huang",
+        "latinName": "Ephedrae Herba",
+        "alias": [
+            "草麻黄",
+            "木贼麻黄"
+        ],
+        "category": "解表药-发散风寒药",
+        "source": "麻黄科植物草麻黄、中麻黄或木贼麻黄的干燥草质茎",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "辛",
+                "微苦"
+            ],
+            "meridians": [
+                "肺",
+                "膀胱"
+            ]
+        },
+        "effects": "发汗解表，宣肺平喘，利水消肿",
+        "indications": "风寒感冒，胸闷喘咳，风水浮肿",
+        "dosage": "2-10g",
+        "caution": "体虚自汗、盗汗及虚喘者禁服",
+        "image": "mahuang.jpg"
+    },
+    {
+        "id": "jinyinhua",
+        "name": "金银花",
+        "pinyin": "Jin Yin Hua",
+        "latinName": "Lonicerae Japonicae Flos",
+        "alias": [
+            "银花",
+            "双花"
+        ],
+        "category": "清热药-清热解毒药",
+        "source": "忍冬科植物忍冬的干燥花蕾或带初开的花",
+        "properties": {
+            "nature": "寒",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "肺",
+                "心",
+                "胃"
+            ]
+        },
+        "effects": "清热解毒，疏散风热",
+        "indications": "痈肿疔疮，喉痹，丹毒，热毒血痢，风热感冒，温病发热",
+        "dosage": "6-15g",
+        "caution": "脾胃虚寒及气虚疮疡脓清者忌用",
+        "image": "jinyinhua.jpg"
+    },
+    {
+        "id": "lianqiao",
+        "name": "连翘",
+        "pinyin": "Lian Qiao",
+        "latinName": "Forsythiae Fructus",
+        "alias": [
+            "青翘",
+            "老翘"
+        ],
+        "category": "清热药-清热解毒药",
+        "source": "木犀科植物连翘的干燥果实",
+        "properties": {
+            "nature": "微寒",
+            "flavor": [
+                "苦"
+            ],
+            "meridians": [
+                "肺",
+                "心",
+                "小肠"
+            ]
+        },
+        "effects": "清热解毒，疏散风热，消肿散结，利尿",
+        "indications": "痈肿疮毒，瘰疬痰核，风热感冒，温病初起，温热入营，高热烦渴，神昏发斑，热淋涩痛",
+        "dosage": "6-15g",
+        "caution": "脾胃虚寒及气虚疮疡脓清者忌用",
+        "image": "lianqiao.jpg"
+    },
+    {
+        "id": "fuling",
+        "name": "茯苓",
+        "pinyin": "Fu Ling",
+        "latinName": "Poria",
+        "alias": [
+            "云苓",
+            "松苓"
+        ],
+        "category": "利水渗湿药",
+        "source": "多孔菌科真菌茯苓的干燥菌核",
+        "properties": {
+            "nature": "平",
+            "flavor": [
+                "甘",
+                "淡"
+            ],
+            "meridians": [
+                "心",
+                "肺",
+                "脾",
+                "肾"
+            ]
+        },
+        "effects": "利水渗湿，健脾，宁心",
+        "indications": "水肿尿少，痰饮眩悸，脾虚食少，便溏泄泻，心神不安，惊悸失眠",
+        "dosage": "10-15g",
+        "caution": "阴虚而无湿热、虚寒滑精、气虚下陷者慎服",
+        "image": "fuling.jpg"
+    },
+    {
+        "id": "chenpi",
+        "name": "陈皮",
+        "pinyin": "Chen Pi",
+        "latinName": "Citri Reticulatae Pericarpium",
+        "alias": [
+            "橘皮"
+        ],
+        "category": "理气药",
+        "source": "芸香科植物橘及其栽培变种的干燥成熟果皮",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "苦",
+                "辛"
+            ],
+            "meridians": [
+                "肺",
+                "脾"
+            ]
+        },
+        "effects": "理气健脾，燥湿化痰",
+        "indications": "脘腹胀满，食少吐泻，咳嗽痰多",
+        "dosage": "3-10g",
+        "caution": "气虚、阴虚燥咳、吐血及舌赤少津者慎服",
+        "image": "chenpi.jpg"
+    },
+    {
+        "id": "shanzha",
+        "name": "山楂",
+        "pinyin": "Shan Zha",
+        "latinName": "Crataegi Fructus",
+        "alias": [
+            "红果"
+        ],
+        "category": "消食药",
+        "source": "蔷薇科植物山里红或山楂的干燥成熟果实",
+        "properties": {
+            "nature": "微温",
+            "flavor": [
+                "酸",
+                "甘"
+            ],
+            "meridians": [
+                "脾",
+                "胃",
+                "肝"
+            ]
+        },
+        "effects": "消食健胃，行气散瘀，化浊降脂",
+        "indications": "肉食积滞，胃湾胀满，泻痢腹痛，瘀血经闭，产后瘀阻，心腹刺痛，胸痹心痛，疝气疼痛，高脂血症",
+        "dosage": "9-12g",
+        "caution": "脾胃虚弱而无积滞者慎用；胃酸分泌过多者慎用",
+        "image": "shanzha.jpg"
+    },
+    {
+        "id": "danshen",
+        "name": "丹参",
+        "pinyin": "Dan Shen",
+        "latinName": "Salviae Miltiorrhizae Radix et Rhizoma",
+        "alias": [
+            "血参",
+            "赤参"
+        ],
+        "category": "活血化瘀药",
+        "source": "唇形科植物丹参的干燥根和根茎",
+        "properties": {
+            "nature": "微寒",
+            "flavor": [
+                "苦"
+            ],
+            "meridians": [
+                "心",
+                "肝"
+            ]
+        },
+        "effects": "活血祛瘀，通经止痛，清心除烦，凉血消痈",
+        "indications": "胸痹心痛，脘腹胁痛，症瘕积聚，热痹疼痛，心烦不眠，月经不调，痛经经闭，疮疡肿痛",
+        "dosage": "10-15g",
+        "caution": "无瘀血者慎用；孕妇慎用；不宜与藜芦同用",
+        "image": "danshen.jpg"
+    },
+    {
+        "id": "sanqi",
+        "name": "三七",
+        "pinyin": "San Qi",
+        "latinName": "Notoginseng Radix et Rhizoma",
+        "alias": [
+            "田七"
+        ],
+        "category": "止血药",
+        "source": "五加科植物三七的干燥根和根茎",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "甘",
+                "微苦"
+            ],
+            "meridians": [
+                "肝",
+                "胃"
+            ]
+        },
+        "effects": "散瘀止血，消肿定痛",
+        "indications": "咯血，吐血，衄血，便血，崩漏，外伤出血，胸腹刺痛，跌扑肿痛",
+        "dosage": "3-9g；研粉吞服，一次1-3g",
+        "caution": "孕妇慎用",
+        "image": "sanqi.jpg"
+    },
+    {
+        "id": "chuanxiong",
+        "name": "川芎",
+        "pinyin": "Chuan Xiong",
+        "latinName": "Chuanxiong Rhizoma",
+        "alias": [
+            "芎藭"
+        ],
+        "category": "活血化瘀药-活血止痛药",
+        "source": "伞形科植物川芎的干燥根茎",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "辛"
+            ],
+            "meridians": [
+                "肝",
+                "胆",
+                "心包"
+            ]
+        },
+        "effects": "活血行气，祛风止痛",
+        "indications": "胸痹心痛，胸胁刺痛，跌扑肿痛，月经不调，经闭痛经，症瘕腹痛，头痛，风湿痹痛",
+        "dosage": "3-10g",
+        "caution": "阴虚火旺、气虚出血、上盛下虚及孕妇慎用",
+        "image": "chuanxiong.jpg"
+    },
+    {
+        "id": "tianma",
+        "name": "天麻",
+        "pinyin": "Tian Ma",
+        "latinName": "Gastrodiae Rhizoma",
+        "alias": [
+            "赤箭",
+            "定风草"
+        ],
+        "category": "平肝息风药",
+        "source": "兰科植物天麻的干燥块茎",
+        "properties": {
+            "nature": "平",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "肝"
+            ]
+        },
+        "effects": "息风止痉，平抑肝阳，祛风通络",
+        "indications": "小儿惊风，癫痫抽搐，破伤风，头痛眩晕，手足不遂，肢体麻木，风湿痹痛",
+        "dosage": "3-10g",
+        "caution": "气血虚甚者慎用",
+        "image": "tianma.jpg"
+    },
+    {
+        "id": "gouqizi",
+        "name": "枸杞子",
+        "pinyin": "Gou Qi Zi",
+        "latinName": "Lycii Fructus",
+        "alias": [
+            "枸杞"
+        ],
+        "category": "补虚药-补阴药",
+        "source": "茄科植物宁夏枸杞的干燥成熟果实",
+        "properties": {
+            "nature": "平",
+            "flavor": [
+                "甘"
+            ],
+            "meridians": [
+                "肝",
+                "肾"
+            ]
+        },
+        "effects": "滋补肝肾，益精明目",
+        "indications": "虚劳精亏，腰膝酸痛，眩晕耳鸣，内热消渴，血虚萎黄，目昏不明",
+        "dosage": "6-12g",
+        "caution": "外邪实热，脾虚有湿及泄泻者忌服",
+        "image": "gouqizi.jpg"
+    },
+    {
+        "id": "dahuang",
+        "name": "大黄",
+        "pinyin": "Da Huang",
+        "latinName": "Rhei Radix et Rhizoma",
+        "alias": [
+            "将军"
+        ],
+        "category": "泻下药-攻下药",
+        "source": "蓼科植物掌叶大黄、唐古特大黄或药用大黄的干燥根和根茎",
+        "properties": {
+            "nature": "寒",
+            "flavor": [
+                "苦"
+            ],
+            "meridians": [
+                "脾",
+                "胃",
+                "大肠",
+                "肝",
+                "心"
+            ]
+        },
+        "effects": "泻下攻积，清热泻火，凉血解毒，逐瘀通经",
+        "indications": "积滞便秘，血热吐衄，目赤咽肿，热毒疮疡，烧烫伤，瘀血诸证，湿热痢疾，黄疸",
+        "dosage": "3-15g；后下",
+        "caution": "孕妇及月经期、哺乳期慎用；脾胃虚寒者慎用",
+        "image": "dahuang.jpg"
+    },
+    {
+        "id": "wuzhuyu",
+        "name": "吴茱萸",
+        "pinyin": "Wu Zhu Yu",
+        "latinName": "Euodiae Fructus",
+        "alias": [
+            "吴萸"
+        ],
+        "category": "温里药",
+        "source": "芸香科植物吴茱萸、石虎或疏毛吴茱萸的干燥近成熟果实",
+        "properties": {
+            "nature": "热",
+            "flavor": [
+                "辛",
+                "苦"
+            ],
+            "meridians": [
+                "肝",
+                "脾",
+                "胃",
+                "肾"
+            ]
+        },
+        "effects": "散寒止痛，降逆止呕，助阳止泻",
+        "indications": "厥阴头痛，寒疝腹痛，寒湿脚气，经行腹痛，脘腹胀痛，呕吐吞酸，五更泄泻",
+        "dosage": "2-5g",
+        "caution": "阴虚有热者忌服；孕妇慎用",
+        "image": "wuzhuyu.jpg"
+    },
+    {
+        "id": "wuweizi",
+        "name": "五味子",
+        "pinyin": "Wu Wei Zi",
+        "latinName": "Schisandrae Chinensis Fructus",
+        "alias": [
+            "北五味子"
+        ],
+        "category": "收涩药",
+        "source": "木兰科植物五味子的干燥成熟果实",
+        "properties": {
+            "nature": "温",
+            "flavor": [
+                "酸",
+                "甘"
+            ],
+            "meridians": [
+                "肺",
+                "心",
+                "肾"
+            ]
+        },
+        "effects": "收敛固涩，益气生津，补肾宁心",
+        "indications": "久嗽虚喘，梦遗滑精，遗尿尿频，久泻不止，自汗盗汗，津伤口渴，短气脉虚，内热消渴，心悸失眠",
+        "dosage": "2-6g",
+        "caution": "外有表邪、内有实热，或咳嗽初起、痧疹初发者忌服",
+        "image": "wuweizi.jpg"
+    }
+]
