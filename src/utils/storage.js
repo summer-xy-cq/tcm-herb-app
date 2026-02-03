@@ -21,7 +21,9 @@ export const saveUserImage = async (herbId, imageData) => {
         const newImage = {
             id: Date.now().toString(),
             data: imageData,
-            timestamp: Date.now()
+            timestamp: Date.now(),
+            verified: false, // Default verification status
+            source: 'ai'     // Default source
         }
 
         await localforage.setItem(key, [newImage, ...currentImages])
@@ -88,12 +90,21 @@ export const updateUserImageHerb = async (oldHerbId, newHerbId, imageId) => {
         const newOldImages = oldImages.filter(img => img.id !== imageId)
         await localforage.setItem(oldKey, newOldImages)
 
-        // 3. 添加到新列表
+        // 3. 更新图片元数据 (人工校验)
+        const updatedImage = {
+            ...targetImage,
+            herbId: newHerbId, // Update ID
+            verified: true,    // Marked as verified
+            source: 'user_correction', // Marked as manual correction
+            correctionTimestamp: Date.now()
+        }
+
+        // 4. 添加到新列表
         const newKey = `images_${newHerbId}`
         const newImages = (await localforage.getItem(newKey)) || []
 
-        // 保持原有的 timestamp 和 id
-        await localforage.setItem(newKey, [targetImage, ...newImages])
+        // 保持原有的 timestamp 和 id, 但更新了verified状态
+        await localforage.setItem(newKey, [updatedImage, ...newImages])
 
     } catch (e) {
         console.error('Update image herb failed', e)
@@ -309,7 +320,7 @@ export const clearAllData = async () => {
     try {
         await localforage.clear()
         // Re-initialize stats
-        await saveStats(getInitialStats())
+        await localforage.setItem('stats', getInitialStats())
     } catch (e) {
         console.error('Clear all data failed', e)
     }
