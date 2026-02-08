@@ -1,16 +1,31 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { getAllUserImages } from '../utils/storage'
 import { getAllHerbs } from '../utils/herbData'
 import './GalleryPage.css'
 
 function GalleryPage() {
     const [herbs, setHerbs] = useState([])
+    const [herbImages, setHerbImages] = useState({})
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
 
     useEffect(() => {
         setHerbs(getAllHerbs())
+        loadUserImages()
     }, [])
+
+    const loadUserImages = async () => {
+        const images = await getAllUserImages()
+        const imageMap = {}
+        // Images are sorted by timestamp desc, so we get the latest one first
+        images.forEach(img => {
+            if (!imageMap[img.herbId]) {
+                imageMap[img.herbId] = img.data
+            }
+        })
+        setHerbImages(imageMap)
+    }
 
     // 获取所有分类
     const categories = ['all', ...new Set(herbs.map(h => h.category))]
@@ -79,7 +94,17 @@ function GalleryPage() {
                                         to={`/herb/${herb.id}`}
                                         className="herb-card touchable"
                                     >
-                                        <div className="herb-card-icon">🌿</div>
+                                        <div className="herb-card-icon">
+                                            {herbImages[herb.id] ? (
+                                                <img
+                                                    src={herbImages[herb.id]}
+                                                    alt={herb.name}
+                                                    className="herb-card-image"
+                                                />
+                                            ) : (
+                                                '🌿'
+                                            )}
+                                        </div>
                                         <span className="herb-card-name">{herb.name}</span>
                                         <span className="herb-card-nature">
                                             {herb.properties?.nature}
@@ -98,7 +123,17 @@ function GalleryPage() {
                                 to={`/herb/${herb.id}`}
                                 className="herb-card touchable"
                             >
-                                <div className="herb-card-icon">🌿</div>
+                                <div className="herb-card-icon">
+                                    {herbImages[herb.id] ? (
+                                        <img
+                                            src={herbImages[herb.id]}
+                                            alt={herb.name}
+                                            className="herb-card-image"
+                                        />
+                                    ) : (
+                                        '🌿'
+                                    )}
+                                </div>
                                 <span className="herb-card-name">{herb.name}</span>
                                 <span className="herb-card-nature">
                                     {herb.properties?.nature}

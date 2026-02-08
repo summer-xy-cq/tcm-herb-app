@@ -2,13 +2,35 @@
     padding-bottom: calc(var(--bottom-nav-height) + var(--spacing-xl));
 }
 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
 .back-btn {
     color: var(--color-primary);
     font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-sm);
     padding: 0;
     display: inline-flex;
     align-items: center;
+}
+
+.gallery-link-btn {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--color-primary);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    border: none;
+    transition: all 0.2s;
+}
+
+.gallery-link-btn:active {
+    background: rgba(99, 102, 241, 0.2);
+    transform: scale(0.98);
 }
 
 .uploads-grid {

@@ -1,0 +1,6 @@
+
+#终端运行，新数据自动同步到app里
+python3 scripts/manage_data.py import
+
+#重新生成excle模板
+python3 scripts/manage_data.py export

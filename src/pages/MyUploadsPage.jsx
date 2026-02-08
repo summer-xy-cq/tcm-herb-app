@@ -51,7 +51,14 @@ function MyUploadsPage() {
     return (
         <div className="page uploads-page">
             <header className="page-header">
-                <button className="back-btn" onClick={() => navigate(-1)}>← 返回</button>
+                <div className="header-top">
+                    <button className="back-btn" onClick={() => navigate(-1)}>← 返回</button>
+                    {!isTodayFilter && (
+                        <button className="gallery-link-btn" onClick={() => navigate('/gallery')}>
+                            📚 饮片图鉴
+                        </button>
+                    )}
+                </div>
                 <h1 className="page-title">{isTodayFilter ? '今日识别' : '我的上传'}</h1>
                 <p className="page-subtitle">{isTodayFilter ? '今天拍摄的中药饮片' : '您拍摄和保存的所有中药饮片'}</p>
             </header>

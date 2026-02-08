@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getStats, clearAllData, getTotalUniqueHerbCount, getAllUserImages } from '../utils/storage'
+import { useTheme } from '../context/ThemeContext'
 import './ProfilePage.css'
 
 function ProfilePage() {
     const navigate = useNavigate()
+    const { theme, toggleTheme } = useTheme()
     const [stats, setStats] = useState(null)
     const [totalUniqueCount, setTotalUniqueCount] = useState(0)
     const [showClearCacheModal, setShowClearCacheModal] = useState(false)
@@ -157,6 +159,19 @@ function ProfilePage() {
             <div className="settings-section fade-in">
                 <h3 className="section-title">通用设置</h3>
                 <div className="settings-list">
+                    <button className="setting-item touchable" onClick={toggleTheme}>
+                        <div className="setting-icon-wrapper" style={{ background: theme === 'dark' ? '#374151' : '#FEF3C7', color: theme === 'dark' ? '#FBBF24' : '#D97706' }}>
+                            {theme === 'dark' ? '🌙' : '☀️'}
+                        </div>
+                        <div className="setting-content">
+                            <span className="setting-label">界面模式</span>
+                            <span className="setting-desc">{theme === 'dark' ? '深色模式' : '浅色模式'}</span>
+                        </div>
+                        <div className={`toggle-switch ${theme === 'dark' ? 'active' : ''}`}>
+                            <div className="toggle-thumb"></div>
+                        </div>
+                    </button>
+
                     <button className="setting-item touchable" onClick={handleExportClick}>
                         <div className="setting-icon-wrapper" style={{ background: '#EEF2FF', color: '#6366F1' }}>
                             📤

@@ -71,7 +71,7 @@ function HomePage() {
             {/* 头部 */}
             <header className="home-header">
                 <div className="home-logo">🌿</div>
-                <h1 className="home-title">药瞳·智记</h1>
+                <h1 className="home-title">药瞳·智考</h1>
                 <p className="home-subtitle">你的随身AI中药导师</p>
             </header>
 
@@ -119,7 +119,7 @@ function HomePage() {
                 <div className="tip-card">
                     <span className="tip-icon">💡</span>
                     <div className="tip-content">
-                        <span className="tip-title">智记</span>
+                        <span className="tip-title">智考</span>
                         {dailyHerb ? (
                             <span className="tip-text">
                                 <strong>{dailyHerb.name}</strong>，
