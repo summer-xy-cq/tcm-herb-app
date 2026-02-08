@@ -12,10 +12,16 @@ export function ThemeProvider({ children }) {
     })
 
     useEffect(() => {
-        // Update the document attribute when theme changes
+        // Update data-theme attribute
         document.documentElement.setAttribute('data-theme', theme)
-        // Save to local storage
         localStorage.setItem('app-theme', theme)
+
+        // Update browser theme-color for Status Bar / Top Area compatibility
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+        if (metaThemeColor) {
+            // Light Mode: Primary Green (#10B981), Dark Mode: Dark Background (#111827)
+            metaThemeColor.setAttribute('content', theme === 'dark' ? '#111827' : '#10B981')
+        }
     }, [theme])
 
     const toggleTheme = () => {

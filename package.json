@@ -1,6 +1,6 @@
 {
   "name": "tcm-herb-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "中药饮片识别学习App - 执业中药师考试辅助工具",
   "type": "module",
   "scripts": {

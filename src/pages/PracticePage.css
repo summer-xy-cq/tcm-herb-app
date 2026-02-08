@@ -85,6 +85,11 @@
     background: transparent;
 }
 
+.dialog {
+    background: var(--color-bg-card) !important;
+    width: 90%;
+}
+
 .search-input:focus {
     outline: none;
     box-shadow: none;

@@ -201,7 +201,7 @@ function ProfilePage() {
                         <div className="setting-content">
                             <span className="setting-label">当前版本</span>
                         </div>
-                        <span className="setting-value">v1.0.1</span>
+                        <span className="setting-value">v1.0.2</span>
                     </div>
                 </div>
             </div>

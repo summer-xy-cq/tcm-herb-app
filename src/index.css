@@ -183,6 +183,10 @@ ol {
 
 .page-header {
   margin-bottom: var(--spacing-lg);
+  background-color: var(--color-bg);
+  /* Ensure background adapts */
+  color: var(--color-text);
+  /* Ensure text adapts */
 }
 
 .page-title {
@@ -248,6 +252,27 @@ ol {
 
 .btn-secondary:hover {
   background-color: var(--color-border);
+}
+
+.btn-danger {
+  background-color: #FEF2F2;
+  color: #EF4444;
+  border: 1px solid #FECACA;
+}
+
+.btn-danger:hover {
+  background-color: #FEE2E2;
+}
+
+/* Dark mode overrides for buttons if needed */
+[data-theme='dark'] .btn-danger {
+  background-color: #450a0a;
+  color: #fca5a5;
+  border-color: #7f1d1d;
+}
+
+[data-theme='dark'] .btn-danger:hover {
+  background-color: #7f1d1d;
 }
 
 /* Toggle Switch */

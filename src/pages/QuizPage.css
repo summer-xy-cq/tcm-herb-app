@@ -75,15 +75,15 @@
 
 .question-text {
     font-size: var(--font-size-lg);
-    font-weight: 700 !important;
+    font-weight: 700;
     line-height: 1.7;
     margin-bottom: var(--spacing-lg);
-    color: #FFFFFF !important;
-    background-color: #000000 !important;
+    color: var(--color-text) !important;
+    background-color: var(--color-bg-card) !important;
     padding: var(--spacing-lg);
     border-radius: var(--radius-lg);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    border: 1px solid #374151;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
 }
 
 /* 选项列表 */
@@ -98,9 +98,8 @@
     align-items: flex-start;
     gap: var(--spacing-md);
     padding: var(--spacing-md);
-    background-color: #1F2937 !important;
-    /* 深灰色选项背景 */
-    border: 2px solid #374151;
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border);
     border-radius: var(--radius-lg);
     text-align: left;
     transition: all 0.2s ease;
@@ -127,9 +126,9 @@
 .option-text {
     flex: 1;
     font-size: var(--font-size-base);
-    font-weight: 600 !important;
+    font-weight: 600;
     line-height: 1.5;
-    color: #FFFFFF !important;
+    color: var(--color-text);
 }
 
 .option-item.selected {
